@@ -68,7 +68,7 @@ const Right = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    padding-top: 60px;
+    padding-top: 70px;
     margin-top: 60px;
 `;
 
@@ -91,7 +91,7 @@ const Intro = () => {
                 </Info>
             </Left>
             <Right>
-                <Image src={man}/>
+                <Image src={man} />
             </Right>
             <AnimatedShapes/>
         </Container>
