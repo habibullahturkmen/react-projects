@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Phone from "../img/app.png";
+import Woman from "../img/business-woman.png";
 import AnimatedShapes from "./AnimatedShapes";
 
 const Container = styled.div`
     display: flex;
-    margin-top: 150px;
 `;
 
 const Left = styled.div`
@@ -58,7 +57,7 @@ const Feature = () => {
     return (
         <Container>
             <Left>
-                <Image src={Phone} />
+                <Image src={Woman} />
             </Left>
             <Right>
                 <Title>
