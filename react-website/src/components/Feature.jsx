@@ -18,6 +18,9 @@ const Left = styled.div`
     @media only screen and (max-width: 480px) {
         display: none;
     }
+    @media only screen and (max-width: 1280px) {
+        margin-top: 100px;
+    }
 `;
 
 const Image = styled.img`

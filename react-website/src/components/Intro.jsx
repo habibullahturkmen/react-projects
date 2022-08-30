@@ -100,6 +100,9 @@ const Image = styled.img`
     width: 100%;
     padding-top: 70px;
     margin-top: 60px;
+    @media only screen and (max-width: 1280px) {
+        margin-top: 90px;
+    }
 `;
 
 const Intro = () => {

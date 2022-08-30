@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Woman from "../img/excited-woman.png";
-import AnimatedShapes from "./AnimatedShapes";
 import MiniCard from "./MiniCard";
 import Play from "../img/play.png";
 import MP4 from "../img/video/video.mp4";

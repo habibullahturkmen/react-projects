@@ -29,10 +29,12 @@ const FormContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    margin: 50px;
-    margin-top: 0;
+    margin: 0px 50px 50px 210px;
     @media only screen and (max-width: 480px) {
         margin: 20px 20px 20px 40px;
+    }
+    @media only screen and (max-width: 1280px) {
+        margin: 0px 50px 50px 55px;
     }
 `;
 

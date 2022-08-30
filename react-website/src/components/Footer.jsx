@@ -14,6 +14,9 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 480px) {
         padding: 20px 10px 10px 10px;
     }
+    @media only screen and (max-width: 1280px) {
+        padding: 30px 20px 20px 20px;
+    }
 `;
 
 const List = styled.ul`
