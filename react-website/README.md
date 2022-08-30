@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# React Single Page Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1080p
+
+![1080p](./src/img/1080p.png)
+
+## 720p
+
+![720p](./src/img/720p.png)
+
+## IPhone SE
+
+![IPhone SE](./src/img/iphone-se.png)
 
 ## Available Scripts
 
