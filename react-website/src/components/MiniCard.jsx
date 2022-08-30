@@ -10,6 +10,9 @@ const Container = styled.div`
     align-items: center;
     -webkit-box-shadow: 6px 7px 15px -5px #000000; 
     box-shadow: 6px 7px 15px -5px #000000;
+    @media only screen and (max-width: 480px) {
+        width: 50px;
+    }
 `;
 
 const Image = styled.img`
@@ -19,6 +22,9 @@ const Image = styled.img`
 const Text = styled.span`
     margin-top: 10px;
     text-align: center;
+    @media only screen and (max-width: 480px) {
+        font-size: 14px;
+    }
 `;
 
 const MiniCard = () => {

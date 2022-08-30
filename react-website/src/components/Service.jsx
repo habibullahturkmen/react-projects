@@ -8,12 +8,18 @@ import MP4 from "../img/video/video.mp4";
 
 const Container = styled.div`
     display: flex;
+    @media only screen and (max-width: 480px) {
+        flex-direction: column;
+    }
 `;
 
 const Left = styled.div`
     width: 50%;
     margin-top: 25px;
     position: relative;
+    @media only screen and (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const Image = styled.img`
@@ -29,17 +35,26 @@ const Video = styled.video`
     bottom: 0;
     right: 0;
     margin: auto;
+    @media only screen and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
 const Right = styled.div`
     width: 50%;
     margin-top: 25px;
+    @media only screen and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 480px) {
+        padding: 20px;
+    }
 `;
 
 const Title = styled.h1`
@@ -77,8 +92,28 @@ const Icon = styled.img`
     margin-right: 10px;
 `;
 
+const Modal = styled.div`
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+`;
+
+const CloseButton = styled.button`
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    right: 5px;
+    top: 30%;
+`;
+
 const Service = () => {
     const [open, setOpen] = useState(false);
+    const smallScreen = window.screen.width <= 480 ? true : false;
 
     return (
         <Container>
@@ -105,7 +140,13 @@ const Service = () => {
                     </Button>
                 </Wrapper>
             </Right>
-            <AnimatedShapes />
+            {smallScreen && open && (
+                <Modal>
+                    <Video open={open} autoPlay loop controls src={MP4} />
+                    <CloseButton onClick={() => setOpen(false)}>Close</CloseButton>
+                </Modal>
+            )}
+            {/* <AnimatedShapes /> */}
         </Container>
     );
 };
