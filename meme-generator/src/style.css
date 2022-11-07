@@ -95,6 +95,10 @@ body {
 
 .meme-button {
     font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.08em;
     width: 477px;
     height: 40px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
@@ -107,4 +111,20 @@ body {
 .meme-button:hover {
     cursor: pointer;
     background: linear-gradient(90.41deg, #aa77bd 1.14%, #4f1864 100%);
+}
+
+.meme-image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 268px;
+    margin: 0 36px 36px 36px;
+}
+
+.txt1, .txt2 {
+    font-size: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000;
 }
