@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #E5E5E5;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 550px;
+    height: 550px;
+    background-color: #FFFFFF;
+}
+
+.nav-container {
+    width: 550px;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.meme-logo {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.meme-title {
+    font-family: 'Karla', sans-serif;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: auto;
+    letter-spacing: -0.05em;
+}
+
+.meme-project {
+    color: #FFFFFF;
+    margin-right: 37px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.meme-input-a {
+    font-family: 'Karla', sans-serif;
+    width: 230px;
+    height: 35px;
+    margin-left: 37px;
+    margin-right: 16px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid #c2bfc9;
+}
+
+.meme-input-b {
+    font-family: 'Karla', sans-serif;
+    width: 230px;
+    height: 35px;
+    margin-right: 36px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid #c2bfc9;
+}
+
+.meme-input-a::placeholder, .meme-input-a::-webkit-input-placeholder, .meme-input-b::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #0D0D0D;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.meme-input-a:-moz-placeholder, .meme-input-b:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #0D0D0D;
+    opacity:  1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.meme-button {
+    font-family: 'Karla', sans-serif;
+    width: 477px;
+    height: 40px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin: 15px 36px 52px 36px;
+    border: none;
+}
+
+.meme-button:hover {
+    cursor: pointer;
+    background: linear-gradient(90.41deg, #aa77bd 1.14%, #4f1864 100%);
+}
