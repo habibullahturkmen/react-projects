@@ -11,7 +11,7 @@ const Meme = () => {
 
     const getRandomMeme = () => {
         const memesArray = memesData.data.memes;
-        const randomNumber = Math.round(Math.random() * 100);
+        const randomNumber = Math.round(Math.random() * memesArray.length);
         setUrl(memesArray[randomNumber].url);
     }
 
