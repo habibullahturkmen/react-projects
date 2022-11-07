@@ -1,2 +1,2 @@
-## Simple React Info Site
-![image](img.png)
+## Travel Journal
+![image](./src/images/img.png)

@@ -7,3 +7,5 @@
 ## [Digital Business Card](https://github.com/habibullahturkmen/react-projects/tree/main/digital-business-card)
 
 ## [Airbnb Experiences](https://github.com/habibullahturkmen/react-projects/tree/main/airbnb-experiences)
+
+## [Travel Journal](https://github.com/habibullahturkmen/react-projects/tree/main/travel-journal)
