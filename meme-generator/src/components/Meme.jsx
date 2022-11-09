@@ -1,28 +1,52 @@
 import React, {useState} from "react";
-import memesData from "../memesData";
 
 const Meme = () => {
 
-    const [url, setUrl] = useState("");
-    const [inputValue1, setInputValue1] = useState("Top text");
-    const [inputValue2, setInputValue2] = useState("Bottom text");
-    const [txt1, setTxt1] = useState("");
-    const [txt2, setTxt2] = useState("");
+    const [meme, setMeme] = React.useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "http://i.imgflip.com/1bij.jpg"
+    })
+    const [allMemes, setAllMemes] = React.useState([])
+    const [text, setText] = React.useState({
+        topText: "",
+        bottomText: ""
+    })
 
-    const getRandomMeme = () => {
-        const memesArray = memesData.data.memes;
-        const randomNumber = Math.round(Math.random() * memesArray.length);
-        setUrl(memesArray[randomNumber].url);
+    React.useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    }, [])
+
+    const getMemeImage = () => {
+        const randomNumber = Math.round(Math.random() * allMemes.length);
+        const url = allMemes[randomNumber].url
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                randomImage: url
+            }
+        })
     }
 
     const printText = () => {
-        setTxt1(inputValue1);
-        setTxt2(inputValue2);
+        setText({topText: meme.topText, bottomText: meme.bottomText})
+        // setTxt1(meme.topText);
+        // setTxt2(meme.bottomText);
     }
 
     const clickMe = () => {
-        getRandomMeme();
+        getMemeImage();
         printText();
+    }
+
+    const handleChange = event => {
+        const {name, value} = event.target
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
     }
 
     return (
@@ -31,14 +55,18 @@ const Meme = () => {
                 <input
                     className="meme-input-a"
                     type="text"
-                    placeholder={inputValue1}
-                    onInput={event => setInputValue1(event.target.value)}
+                    placeholder="Top Text"
+                    name="topText"
+                    value={meme.topText}
+                    onInput={handleChange}
                 />
                 <input
                     className="meme-input-b"
                     type="text"
-                    placeholder={inputValue2}
-                    onInput={event => setInputValue2(event.target.value)}
+                    placeholder="Bottom Text"
+                    name="bottomText"
+                    value={meme.bottomText}
+                    onInput={handleChange}
                 />
                 <input
                     className="meme-button"
@@ -46,14 +74,10 @@ const Meme = () => {
                     value={"Get a new meme image 🖼"}
                     onClick={clickMe}
                 />
-                <div
-                    className="meme-image-container"
-                    style={{
-                        backgroundImage: `url(${url})`,
-                        backgroundSize: 'cover'
-                    }}>
-                    <h1 className="txt1">{txt1}</h1>
-                    <h1 className="txt2">{txt2}</h1>
+                <div className="meme-image-container">
+                    <img src={meme.randomImage} className="meme-image"  alt="Meme Image"/>
+                    <h1 className="meme--text top">{text[0]}</h1>
+                    <h1 className="meme--text bottom">{text[1]}</h1>
                 </div>
             </div>
         </div>
