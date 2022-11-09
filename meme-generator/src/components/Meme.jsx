@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 const Meme = () => {
 
@@ -32,8 +32,6 @@ const Meme = () => {
 
     const printText = () => {
         setText({topText: meme.topText, bottomText: meme.bottomText})
-        // setTxt1(meme.topText);
-        // setTxt2(meme.bottomText);
     }
 
     const clickMe = () => {
