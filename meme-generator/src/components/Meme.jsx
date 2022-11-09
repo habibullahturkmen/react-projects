@@ -74,8 +74,8 @@ const Meme = () => {
                 />
                 <div className="meme-image-container">
                     <img src={meme.randomImage} className="meme-image"  alt="Meme Image"/>
-                    <h1 className="meme--text top">{text[0]}</h1>
-                    <h1 className="meme--text bottom">{text[1]}</h1>
+                    <h1 className="meme--text top">{text.topText}</h1>
+                    <h1 className="meme--text bottom">{text.bottomText}</h1>
                 </div>
             </div>
         </div>
