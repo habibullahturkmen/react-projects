@@ -14,7 +14,7 @@ const QuizForm = (props) => {
 
         return (
             <div className="quiz-form-container">
-                <h3>Sorry! We couldn't find any questions with these options!</h3>
+                <h3>Sorry! We couldn't find any questions with these options! <br/><br/> Go to Main Menu and try again.</h3>
                 <input className="quiz-form-btn" type="button" value="Main Menu" onClick={props.handleMainMenu} />
             </div>
         );

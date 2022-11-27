@@ -38,6 +38,10 @@ body {
     left: 0;
 }
 
+.loader {
+    width: 6.25rem;
+}
+
 .quiz-form-container {
     display: flex;
     flex-direction: column;
@@ -159,7 +163,7 @@ body {
 .answers {
     font-family: 'Inter', sans-serif;
     border: 0.084em solid #4D5B9E;
-    border-radius: 7.94239px;
+    border-radius: 0.5em;
     text-align: center;
     font-size: 0.85rem;
     font-weight: 500;

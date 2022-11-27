@@ -14,20 +14,24 @@ const App = () => {
     const [isLoading, setIsLoading] = React.useState(true);
     const [quizzes, setQuizzes] = React.useState({});
     const [noQuestion, setNoQuestion] = React.useState(1)
+    const [isFetch, setIsFetch] = React.useState(false)
     const [quizSelectionData, setQuizSelectionData] = React.useState({});
     const [showAnswers, setShowAnswers] = React.useState(false);
 
     React.useEffect(() => {
-        fetchQuizzes(quizSelectionData).then(data => {
-            setNoQuestion(data.response_code);
-            setQuizzes(data.results.map(quiz => {
+        fetchQuizzes(quizSelectionData).then(({response_code, results}) => {
+            setNoQuestion(response_code);
+            setQuizzes(results.map(quiz => {
                 return {
                     ...quiz,
-                    answers: [quiz.correct_answer, ...quiz.incorrect_answers].sort().reverse(),
+                    answers: [quiz["correct_answer"], ...quiz["incorrect_answers"]].sort().reverse(),
                     id: nanoid()
                 }
             }));
-        });
+            setIsFetch(true);
+        }).catch(() => {
+            setIsFetch(false);
+        })
 
         setTimeout(() => {
             setIsLoading(false);
@@ -128,12 +132,20 @@ const App = () => {
             <main className="main-container">
                 <img className="bg-img-1" src={bgImg1} alt="gb-1" />
                 <img className="bg-img-2" src={bgImg2} alt="gb-2" />
-                <img src={Loader} alt="loader" width={100} />
+                <img className="loader" src={Loader} alt="loader" />
             </main>
         );
     }
 
-    if (!isStart || noQuestion === 1) {
+
+    if (!isFetch) {
+        return (
+            <div className="quiz-form-container">
+                <h3>Unable to Fetch the questions! Check your internet connection, refresh the web page and try again.</h3>
+                <input className="quiz-form-btn" type="button" value="Refresh Page" onClick={() => window.location.reload()} />
+            </div>
+        );
+    } else if (!isStart || noQuestion === 1) {
         return (
             <>
                 <img className="bg-img-1" src={bgImg1} alt="gb-1" />
