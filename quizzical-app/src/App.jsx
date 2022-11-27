@@ -140,11 +140,18 @@ const App = () => {
 
     if (!isFetch) {
         return (
-            <div className="quiz-form-container">
-                <h3>Unable to Fetch the questions! Check your internet connection, refresh the web page and try again.</h3>
-                <input className="quiz-form-btn" type="button" value="Refresh Page" onClick={() => window.location.reload()} />
-            </div>
+            <>
+                <img className="bg-img-1" src={bgImg1} alt="gb-1" />
+                <img className="bg-img-2" src={bgImg2} alt="gb-1" />
+                <main className="main-container">
+                    <div className="refresh-page-container">
+                        <h3>Unable to Fetch the questions! Check your internet connection, refresh the page and try again.</h3>
+                        <input className="quiz-form-btn" type="button" value="Refresh Page" onClick={() => window.location.reload()} />
+                    </div>
+                </main>
+            </>
         );
+
     } else if (!isStart || noQuestion === 1) {
         return (
             <>
