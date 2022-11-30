@@ -7,8 +7,9 @@
 ![image](./markdown-preview/img.png)
 
 ## [Tenzies Game](https://github.com/habibullahturkmen/react-projects/tree/main/tenzies-game)
-
-![image](./tenzies-game/img2.png)
+<p align="center">
+  <img src="./tenzies-game/img2.png"  alt="Mobile View"/>
+</p>
 
 ## [Meme Generator](https://github.com/habibullahturkmen/react-projects/tree/main/meme-generator)
 
@@ -19,17 +20,20 @@
 ![image](./travel-journal/src/images/img.png)
 
 ## [Airbnb Experiences](https://github.com/habibullahturkmen/react-projects/tree/main/airbnb-experiences)
-
-![image](./airbnb-experiences/img.png)
+<p align="center">
+  <img src="./airbnb-experiences/img.png"  alt="Mobile View"/>
+</p>
 
 ## [Digital Business Card](https://github.com/habibullahturkmen/react-projects/tree/main/digital-business-card)
-
-![image](./digital-business-card/img.png)
+<p align="center">
+  <img src="./digital-business-card/img.png"  alt="Mobile View"/>
+</p>
 
 ## [React Single Page Website](https://github.com/habibullahturkmen/react-projects/tree/main/react-website)
 
 ![image](./react-website/src/img/1080p.png)
 
 ## [Simple React Info Site](https://github.com/habibullahturkmen/react-projects/tree/main/react-info-site)
-
-![image](./react-info-site/img.png)
+<p align="center">
+  <img src="./react-info-site/img.png"  alt="Mobile View"/>
+</p>
