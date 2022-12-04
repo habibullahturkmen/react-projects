@@ -177,6 +177,7 @@ body {
     font-weight: 500;
     line-height: 0.90rem;
     padding: 0.50em 1em;
+    user-select: none;
 }
 
 .correct-answer {
