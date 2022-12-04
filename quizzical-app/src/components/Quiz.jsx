@@ -19,7 +19,7 @@ const Quiz = (props) => {
                 </div>
             </div>
             <div className="answers-container">
-                <p
+                <button
                     className={`answers ${props.showAnswers && props.correctAnswer === decode(props.answers[0])
                         ? "correct-answer"
                         : props.showAnswers && props.selectedAnswer === decode(props.answers[0])
@@ -31,8 +31,8 @@ const Quiz = (props) => {
                     onClick={!props.showAnswers ? (event) => props.handleAnswerSelection(event, props.id, props.correctAnswer) : () => { }}
                 >
                     {decode(props.answers[0])}
-                </p>
-                <p
+                </button>
+                <button
                     className={`answers ${props.showAnswers && props.correctAnswer === decode(props.answers[1])
                         ? "correct-answer"
                         : props.showAnswers && props.selectedAnswer === decode(props.answers[1])
@@ -44,10 +44,10 @@ const Quiz = (props) => {
                     onClick={!props.showAnswers ? (event) => props.handleAnswerSelection(event, props.id, props.correctAnswer) : () => { }}
                 >
                     {decode(props.answers[1])}
-                </p>
+                </button>
                 {props.type !== "boolean" &&
                     <>
-                        <p
+                        <button
                             className={`answers ${props.showAnswers && props.correctAnswer === decode(props.answers[2])
                                 ? "correct-answer"
                                 : props.showAnswers && props.selectedAnswer === decode(props.answers[2])
@@ -59,8 +59,8 @@ const Quiz = (props) => {
                             onClick={!props.showAnswers ? (event) => props.handleAnswerSelection(event, props.id, props.correctAnswer) : () => { }}
                         >
                             {decode(props.answers[2])}
-                        </p>
-                        <p
+                        </button>
+                        <button
                             className={`answers ${props.showAnswers && props.correctAnswer === decode(props.answers[3])
                                 ? "correct-answer"
                                 : props.showAnswers && props.selectedAnswer === decode(props.answers[3])
@@ -72,7 +72,7 @@ const Quiz = (props) => {
                             onClick={!props.showAnswers ? (event) => props.handleAnswerSelection(event, props.id, props.correctAnswer) : () => { }}
                         >
                             {decode(props.answers[3])}
-                        </p>
+                        </button>
                     </>
                 }
             </div>
