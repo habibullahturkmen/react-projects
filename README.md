@@ -1,6 +1,22 @@
 ## [Quizzical App](https://github.com/habibullahturkmen/react-projects/tree/main/quizzical-app)
 
-![image](./quizzical-app/src/assets//img.png)
+![image](./quizzical-app/src/assets/img.png)
+
+<p align="center">
+  <img src="./quizzical-app/src/assets/img-iphone.png"  alt="Mobile View"/>
+</p>
+
+## [Pic Some](https://github.com/habibullahturkmen/react-projects/tree/main/airbnb-experiences)
+
+![image](./ecommerce/src/assets/img1.png)
+![image](./ecommerce/src/assets/img2.png)
+
+<p align="center">
+  <img src="./ecommerce/src/assets/img3.png"  alt="Mobile View"/>
+</p>
+<p align="center">
+  <img src="./ecommerce/src/assets/img4.png"  alt="Mobile View"/>
+</p>
 
 ## [MarkDown Preview](https://github.com/habibullahturkmen/react-projects/tree/main/markdown-preview)
 
