@@ -7,8 +7,8 @@ import {v4 as uuidv4} from "uuid";
 
 function Photos() {
 
-    const {allPhotos} = React.useContext(Context);
-    const imageElements = allPhotos.map((image, index) => (
+    const {photos} = React.useContext(Context);
+    const imageElements = photos.map((image, index) => (
         <Image
             key={uuidv4()}
             img={image}

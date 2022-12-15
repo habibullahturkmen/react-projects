@@ -3,7 +3,7 @@ const Context = React.createContext();
 
 const ContextProvider = (props) => {
     const [photos, setPhotos] = React.useState([]);
-    const [isFavorited, setIsFavorited] = React.useState(false);
+    const [cartItems, setCartItems] = React.useState([]);
 
     const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json";
 
@@ -15,7 +15,6 @@ const ContextProvider = (props) => {
             });
     }, []);
 
-
     const toggleFavorite = (id) => {
         const updatedArray = [...photos];
         for (const photo of updatedArray) {
@@ -24,13 +23,19 @@ const ContextProvider = (props) => {
             }
         }
         setPhotos(updatedArray);
-    }
+    };
+
+    const addToCart = (image) => {
+        setCartItems(prevItems => [...prevItems, image]);
+    };
+
+    console.log(cartItems);
 
     return (
-        <Context.Provider value={{allPhotos: photos, toggleFavorite}}>
+        <Context.Provider value={{photos, toggleFavorite, cartItems, addToCart}}>
             {props.children}
         </Context.Provider>
     );
 }
 
-export { ContextProvider, Context}
+export { ContextProvider, Context};

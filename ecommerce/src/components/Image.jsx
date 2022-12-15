@@ -5,9 +5,7 @@ import * as PropTypes from "prop-types";
 function Image({className, img}) {
 
     const [isHovered, setIsHovered] = React.useState(false);
-    const {toggleFavorite} = React.useContext(Context);
-
-    const cartIcon = isHovered && <i className="ri-add-circle-line cart"></i>;
+    const {toggleFavorite, addToCart, cartItems} = React.useContext(Context);
 
     const heartIcon = () => {
         return img.isFavorite
@@ -15,7 +13,15 @@ function Image({className, img}) {
             : isHovered
                 ? <i className="ri-heart-line favorite" onClick={() => toggleFavorite(img.id)}></i>
                 : "";
-    }
+    };
+
+    const cartIcon = () => {
+        if (cartItems.find(item => item.id === img.id)) {
+            return <i className="ri-shopping-cart-fill cart"></i>;
+        } else if (isHovered) {
+            return <i className="ri-add-circle-line cart" onClick={() => addToCart(img)}></i>;
+        }
+    };
 
     return (
         <div
@@ -29,7 +35,7 @@ function Image({className, img}) {
                 alt="Items"
             />
             {heartIcon()}
-            {cartIcon}
+            {cartIcon()}
         </div>
     );
 }
@@ -41,6 +47,6 @@ Image.propTypes = {
         url: PropTypes.string.isRequired,
         isFavorite: PropTypes.bool
     })
-}
+};
 
 export default Image;
